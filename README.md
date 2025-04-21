@@ -1,5 +1,5 @@
-***🧠 Real-Time Depression Motion Detection System using Deep Learning & ML
-This is a Flask-based real-time Depression Detection System that uses a trained CNN model for facial emotion recognition and an XGBoost model for mental health prediction based on questionnaire responses.***
+***🧠 Real-Time Depression Motion Detection System using Deep Learning & ML***
+This is a Flask-based real-time Depression Detection System that uses a trained CNN model for facial emotion recognition and an XGBoost model for mental health prediction based on questionnaire responses.
 
 ***🚨 Features***
 🎥 Real-time facial expression detection using webcam
