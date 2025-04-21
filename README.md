@@ -1,98 +1,98 @@
-***🧠 Real-Time Depression Motion Detection System using Deep Learning & ML***
-This is a Flask-based real-time Depression Detection System that uses a trained CNN model for facial emotion recognition and an XGBoost model for mental health prediction based on questionnaire responses.
+***🧠 Real-Time Depression Motion Detection System using CNN & XGBoost***
+This is a Flask-based real-time Depression Detection System that uses a CNN model to detect facial expressions from camera feed and predicts depression based on user responses using an XGBoost ML model.
 
-***🚨 Features***
-🎥 Real-time facial expression detection using webcam
+***✨ Features***
+📸 Real-time facial emotion detection using CNN (emotion.h5)
 
-🧠 Depression prediction based on XGBoost ML model
+🧾 Questionnaire-based depression prediction using XGBoost (xgb_model.joblib)
 
-📋 Interactive questionnaire for psychological evaluation
+🧠 Emotion count and depression result displayed on a separate result page
 
-📊 Emotion count display with separate results page
+🧩 Combines Deep Learning + Machine Learning models
 
-🎯 Combines deep learning (CNN) and machine learning (XGBoost)
+🎯 Separate borders for camera and questionnaire section
 
-💻 User-friendly Flask Web Interface
+💻 Flask Web Interface for user interaction
 
-✨ Custom UI with camera + questions shown in separate sections
+📊 Future scope: Add charts, animations, and better visualization
+
 
 ***💡 How It Works***
-User visits the web interface.
+User opens the app and camera starts detecting real-time facial emotions.
 
-The camera captures facial expressions in real time.
+The CNN model classifies emotions (Happy, Sad, Angry, etc.).
 
-Detected emotions are analyzed using a CNN model.
+User fills out a depression questionnaire.
 
-The user answers a set of questions in the questionnaire.
+The XGBoost model uses the emotion count + answers to predict depression.
 
-The emotion count + questionnaire responses are passed to the XGBoost model.
-
-The app predicts the user's likelihood of being in a depressive state.
-
-Final results and statistics are displayed on a separate results page.
+The result is shown on a final results page with emotion statistics.
 
 ***🧠 Tech Stack***
-TensorFlow / Keras – Facial emotion detection model
+🧪 CNN (Keras) – For real-time emotion classification
 
-XGBoost – Depression classification
+📊 XGBoost – For depression classification using combined input
 
-Flask – Python web framework
+🌐 Flask – Lightweight Python web framework
 
-OpenCV – Camera feed processing
+🎥 OpenCV – Capturing camera feed
 
-Pandas, NumPy, Scikit-learn – Data preprocessing & manipulation
+🧮 NumPy, Pandas – Data processing
 
-HTML/CSS (Jinja2) – Frontend templates
+📄 Jupyter Notebooks – For model training and experimentation
 
 ***📁 Project Structure***
 
 depression_motion/
 │
-├── app.py                     # Main Flask app entry
-├── emotion.py                 # Facial emotion detection logic
-├── deeppp.py                  # Model architecture & training
-├── modelgen.py                # Generates and trains ML models
-├── emotion_depression.ipynb  # Final Jupyter notebook for testing
-├── working.ipynb             # Experimentation notebook
-├── *.pkl, *.joblib, *.h5      # Trained model files
-├── *.csv                      # Dataset files
+├── app.py                     # Flask app for running camera and questionnaire
+├── emotion.py                 # Real-time emotion detection logic
+├── modelgen.py                # ML model training and feature generation
+├── deeppp.py                  # CNN model training script
+├── emotion_depression.ipynb  # Final implementation notebook
+├── working.ipynb             # Testing & experimentation notebook
 │
 ├── templates/
-│   ├── index.html             # Main UI (camera + questionnaire)
-│   └── result.html            # Emotion + depression result page
+│   ├── index.html             # Main interface (camera + questionnaire)
+│   └── result.html            # Final results and emotion analysis
 │
-└── static/                    # Optional static files (CSS, JS, images)
+├── static/                    # CSS, JS, images (if any)
+├── emotion.h5                # Trained CNN model for facial emotion
+├── xgb_model.joblib          # Trained XGBoost model for depression
+├── depression_dataset.csv    # Dataset used for training ML model
+├── new_dataset.csv           # Processed dataset
+├── result.csv                # Saved outputs
 
 ***⚙️ Setup Instructions***
-1.Clone the repository
+
+*1.Clone the repository*
+
 git clone https://github.com/rutu4401/depression-motion-detector.git
 cd depression-motion-detector
 
-2.(Optional) Create a virtual environment
-
+*2.(Optional) Create a virtual environment*
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
 
-
-3.Install dependencies
+*3.Install the required packages*
 pip install -r requirements.txt
 
-4.Run the Flask app
+*4.Run the Flask app*
 python app.py
 
-5.Access the application
+*5.Open in browser*
 http://127.0.0.1:5000/
 
+***📊 Dataset***
+Facial Emotion Dataset – Used to train the CNN model
 
-***📊 Datasets Used***
-depression_dataset.csv – For training depression classifier
+Depression Questionnaire Dataset – Used to train XGBoost model
 
-new_dataset.csv – Cleaned/merged data for questionnaire model
+All datasets are included in .csv format
 
-Real-time webcam feed for emotion detection
-
-👩‍💻 Developed By
+*👩‍💻 Developed By*
 Rutuja Gaikwad
 
-🛡️ License
-This project is licensed under the MIT License. See the LICENSE file for more details.
+*🛡️ License*
+This project is licensed under the MIT License.
+
